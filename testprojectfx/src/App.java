@@ -8,7 +8,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Object root = FXMLLoader.load(getClass().getResource("loginscene.fxml"));
+            Object root = FXMLLoader.load(getClass().getResource("loginscene2.fxml"));
             Scene scene = new Scene((Parent) root);
             primaryStage.setTitle("Hellyeahh");
             primaryStage.setScene(scene);

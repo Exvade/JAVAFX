@@ -7,6 +7,6 @@ public class Scene2Controller {
     private Label nameLabel;
     
     public void displayName(String username) {
-        nameLabel.setText("Selamat Datang " + username);
+      nameLabel.setText("Selamat Datang " + username);
     }
 }

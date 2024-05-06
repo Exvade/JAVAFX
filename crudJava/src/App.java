@@ -9,8 +9,8 @@ public class App extends Application {
   public void start(Stage primaryStage) {
   try {
    Object root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
-   Scene scene = new Scene((Parent) root);
-   primaryStage.setTitle("CRUD JAVA");
+   Scene scene = new Scene((Parent)root);
+   primaryStage.setTitle("Hellyeahh");
    primaryStage.setScene(scene);
    primaryStage.show();
   } catch (Exception e) {

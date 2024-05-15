@@ -971,35 +971,6 @@ public class mainFormController implements Initializable {
         }
     }
     
-    public void menuReceiptBtn() {
-        
-        if (totalP == 0 || menu_amount.getText().isEmpty()) {
-            alert = new Alert(AlertType.ERROR);
-            alert.setTitle("Error Message");
-            alert.setContentText("Please order first");
-            alert.showAndWait();
-        } else {
-            HashMap map = new HashMap();
-            map.put("getReceipt", (cID - 1));
-            
-            try {
-                
-                JasperDesign jDesign = JRXmlLoader.load("D:\\kuliahNgoding\\JAVAFX\\cafeShopManagementSystem\\src\\cafeshopmanagementsystem\\report.jrxml");
-                JasperReport jReport = JasperCompileManager.compileReport(jDesign);
-                JasperPrint jPrint = JasperFillManager.fillReport(jReport, map, connect);
-                
-                JasperViewer.viewReport(jPrint, false);
-                
-                menuRestart();
-                
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            
-        }
-        
-    }
-    
     public void menuRestart() {
         totalP = 0;
         change = 0;

@@ -47,6 +47,7 @@ public class cardProductController implements Initializable {
     @FXML
     private Button prod_addBtn;
 
+    @SuppressWarnings("unused")
     private productData prodData;
     private Image image;
 

@@ -13,7 +13,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -47,14 +46,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
-import net.sf.jasperreports.view.JasperViewer;
-
 /**
  *
  * @author WINDOWS 10
@@ -320,11 +311,13 @@ public class mainFormController implements Initializable {
         }
     }
     
+    @SuppressWarnings("unchecked")
     public void dashboardIncomeChart() {
         dashboard_incomeChart.getData().clear();
         
         String sql = "SELECT date, SUM(total) FROM receipt GROUP BY date ORDER BY TIMESTAMP(date)";
         connect = database.connectDB();
+        @SuppressWarnings("rawtypes")
         XYChart.Series chart = new XYChart.Series();
         try {
             prepare = connect.prepareStatement(sql);
@@ -341,11 +334,13 @@ public class mainFormController implements Initializable {
         }
     }
     
+    @SuppressWarnings("unchecked")
     public void dashboardCustomerChart(){
         dashboard_CustomerChart.getData().clear();
         
         String sql = "SELECT date, COUNT(id) FROM receipt GROUP BY date ORDER BY TIMESTAMP(date)";
         connect = database.connectDB();
+        @SuppressWarnings("rawtypes")
         XYChart.Series chart = new XYChart.Series();
         try {
             prepare = connect.prepareStatement(sql);
@@ -666,6 +661,7 @@ public class mainFormController implements Initializable {
     
     private String[] typeList = {"Meals", "Drinks"};
     
+    @SuppressWarnings("unchecked")
     public void inventoryTypeList() {
         
         List<String> typeL = new ArrayList<>();
@@ -680,6 +676,7 @@ public class mainFormController implements Initializable {
     
     private String[] statusList = {"Available", "Unavailable"};
     
+    @SuppressWarnings("unchecked")
     public void inventoryStatusList() {
         
         List<String> statusL = new ArrayList<>();

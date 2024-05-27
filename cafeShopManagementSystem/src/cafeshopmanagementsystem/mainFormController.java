@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cafeshopmanagementsystem;
 
 import java.io.File;
@@ -46,10 +42,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-/**
- *
- * @author WINDOWS 10
- */
+
 public class mainFormController implements Initializable {
     
     @FXML
@@ -670,6 +663,7 @@ public class mainFormController implements Initializable {
             typeL.add(data);
         }
         
+        @SuppressWarnings("rawtypes")
         ObservableList listData = FXCollections.observableArrayList(typeL);
         inventory_type.setItems(listData);
     }
@@ -685,6 +679,7 @@ public class mainFormController implements Initializable {
             statusL.add(data);
         }
         
+        @SuppressWarnings("rawtypes")
         ObservableList listData = FXCollections.observableArrayList(statusL);
         inventory_status.setItems(listData);
         
@@ -1168,8 +1163,3 @@ public class mainFormController implements Initializable {
     }
     
 }
-
-
-// THATS IT FOR THIS VIDEO, THANKS FOR WATCHING!
-// SUBSCRIBE OUR CHANNEL FOR MORE UNIQUE TUTORIALS 
-// THANK YOU!

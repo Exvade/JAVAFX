@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cafeshopmanagementsystem;
 
 import java.net.URL;
@@ -23,10 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-/**
- *
- * @author WINDOWS 10
- */
+
 public class cardProductController implements Initializable {
 
     @FXML
